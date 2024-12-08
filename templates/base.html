@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag and drop image upload</title>
+
+    {% block head %}
+    {% endblock %}
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -775,9 +777,9 @@
                       {% if request.path == '/imagecolor' %} bord{% endif %} z-50">
                 image color
             </a>
-            <a href="#"
+            <a href="/audio"
                class="block md:inline-block text-gray-400 hover:text-white  px-3 py-3 border-b-2 border-teal-900 md:border-none
-                      {% if request.path == '#' %} bord{% endif %} z-50">
+                      {% if request.path == '/audio' %} bord{% endif %} z-50">
                 audio
             </a>
             <a href="/compare_compression"
